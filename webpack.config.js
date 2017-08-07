@@ -5,13 +5,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     context: resolve(__dirname, 'src'),
     entry: [
-        './scripts/main.js'
-        // the entry point of our app
+        './app/App.js',
     ],
     output: {
-        filename: 'main.js',
+        path: resolve(__dirname, 'publish'),
+        filename: 'bundle.js'
     },
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {
@@ -30,7 +30,7 @@ module.exports = {
                                 loader: "sass-loader" // compiles Sass to CSS
                             }
                         ],
-                        fallback: "style-loader" // used when css not extracted
+                        fallback: "style-loader" //    used when css not extracted
                     }
                 ))
             },

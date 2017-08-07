@@ -16,12 +16,12 @@ module.exports = {
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
 
-        './scripts/main.js'
+        './app/App.js'
         // the entry point of our app
     ],
     output: {
-        filename: 'main.js',
-        path: resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        path: resolve(__dirname, 'publish'),
         publicPath: '/'
         // necessary for HMR to know where to load the hot update chunks
     },

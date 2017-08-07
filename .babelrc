@@ -5,6 +5,12 @@
     "stage-1"
   ],
   "plugins": [
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": true,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }]
   ]
 }

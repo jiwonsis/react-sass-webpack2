@@ -26,8 +26,7 @@ ul {
 }
 
 .app {
-  -ms-word-wrap: nowrap;
-  word-wrap: nowrap;
+  white-space: nowrap;
   height: 100%;
 }
 
@@ -42,7 +41,7 @@ ul {
   overflow: auto;
 
   :not(:last-child) {
-    :after {
+    &:after {
       content: '';
       position: absolute;
       top: 0;
@@ -71,7 +70,7 @@ ul {
   font-weight: bold;
   border-bottom: 5px solid transparent;
 
-  :before {
+  &:before {
     display: inline-block;
     width: 1em;
     content: '▶︎';
@@ -79,13 +78,13 @@ ul {
 }
 
 .card__title--is-open {
-  :before {
+  &:before {
     content: '▼';
   }
 }
 
 .checklist__task {
-  :first-child {
+  &:first-child {
     margin-top: 10px;
     padding-top: 10px;
     border-top:1px dashed #ddd;
@@ -93,9 +92,17 @@ ul {
 }
 
 .checklist__task--remove {
-  :after {
+  &:after {
     display: inline-block;
     color:#d66;
     content: "+";
   }
+}
+
+.checklist--add-task {
+  border: 1px dashed #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
 }
